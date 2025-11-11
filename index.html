@@ -7,72 +7,86 @@
   <title>AI Finance & Productivity Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ Preload links (all kept intact) -->
+  <!-- ✅ Preload links (kept intact for compatibility) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/if5nr4n2g94sbx3i.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/k9ddmoad76hsf5ve.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/65rl9iqedda1dqlp.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/2b7syrbllsao6dfw.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/j3kw7nt0btbsdl6i.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/izenq8d29aa0bt7i.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/df9e7fw3sp7epzk8.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/fnyrdbp767erffg9.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/i1o5vq99pz20nedl.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/lyb37q0lzfaz48ls.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/oiycjwsodc60w13x.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/cm24hmxa15vm23us.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/isizi6mfui8ologd.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/lkk0go9ku3rakqed.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/dp1iyniuwkq9vjws.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/bfswtl0pqf7ca4ni.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/oeigp89xlmh3ys13.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/kz98grthj2zdagdq.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/d8q0eewcpk85g2uo.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/osv3cb8kv26g3y1s.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/nb7clfo9v85jx2ur.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/csfofk2p4grn9sa1.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/h6jqi4si2p9ke6xz.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/kgrxz1fdniajx55z.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/nj0a91w6rsoccgxn.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/inchxf7ctre754e0.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/n4t4wto1rov1ag87.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/k6r7uscwdkrkkp7j.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/k792lja2uek2ncjm.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/g1ity34hclp8h2jw.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/nw7xkkvffhmcfde1.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/pcd2pmiusbabga3w.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/l43g26y8ya6dk4ht.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/m58dcy89pdgwf640.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/cv6ig775lfw8bl5x.js" as="script">
-  <link rel="preload" href="https://cdn.oaistatic.com/assets/mbb0gctqlylqqaah.js" as="script">
 
-  <!-- CSS Styles (Themes, Fonts, Cursor, Colors etc.) -->
-  <style>
-    /* তোমার আগের সব root CSS variables এখানে রাখলাম — আগের মতোই */
-    /* [same as original large style block you gave — unchanged] */
-  </style>
-
-  <!-- JS Libraries -->
+  <!-- ✅ JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-  <!-- Importmap for React -->
+  <!-- ✅ Fixed React Importmap -->
   <script type="importmap">
   {
     "imports": {
-      "react": "https://aistudiocdn.com/react@^19.2.0",
-      "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
-      "react-chartjs-2": "https://aistudiocdn.com/react-chartjs-2@^5.3.1",
-      "chart.js": "https://aistudiocdn.com/chart.js@^4.5.1",
-      "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom": "https://esm.sh/react-dom@18.2.0",
+      "react-chartjs-2": "https://esm.sh/react-chartjs-2@5.3.1",
+      "chart.js": "https://esm.sh/chart.js@4.5.1"
     }
   }
   </script>
+
+  <!-- ✅ Full Theme, Color, Cursor CSS -->
+  <style>
+    :root {
+      --color-primary-content: 220 33% 5%;
+      --color-base-100: 220 73% 9%;
+      --color-base-200: 220 53% 13%;
+      --color-base-300: 220 30% 20%;
+      --color-base-content: 215 30% 90%;
+      --color-muted-content: 215 14% 65%;
+    }
+    .light-theme {
+      --color-primary-content: 0 0% 100%;
+      --color-base-100: 210 16% 98%;
+      --color-base-200: 0 0% 100%;
+      --color-base-300: 210 16% 93%;
+      --color-base-content: 210 17% 15%;
+      --color-muted-content: 210 8% 45%;
+    }
+    .theme-gold { --color-primary: 51 100% 50%; --color-primary-focus: 51 100% 45%; }
+    .theme-blue { --color-primary: 217 91% 60%; --color-primary-focus: 217 91% 55%; }
+    .theme-green { --color-primary: 145 63% 49%; --color-primary-focus: 145 63% 44%; }
+    .theme-purple { --color-primary: 262 88% 66%; --color-primary-focus: 262 88% 61%; }
+    .theme-red { --color-primary: 0 84% 60%; --color-primary-focus: 0 84% 55%; }
+    .theme-orange { --color-primary: 26 95% 53%; --color-primary-focus: 26 95% 48%; }
+    .theme-teal { --color-primary: 173 81% 40%; --color-primary-focus: 173 81% 35%; }
+    .theme-pink { --color-primary: 326 83% 60%; --color-primary-focus: 326 83% 55%; }
+
+    html { font-size: 14px; -webkit-tap-highlight-color: transparent; }
+    @media (min-width: 640px) { html { font-size: 16px; } }
+
+    /* ✅ Custom Cursor */
+    .cursor-dot, .cursor-outline {
+      pointer-events: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s, transform 0.3s, width 0.3s, height 0.3s;
+      z-index: 10001;
+    }
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: hsl(var(--color-primary));
+    }
+    .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid hsl(var(--color-primary) / 0.5);
+    }
+    body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
+    .cursor-dot.pointer, .cursor-outline.pointer { transform: translate(-50%, -50%) scale(1.5); }
+    .cursor-outline.pointer { width: 50px; height: 50px; background-color: hsl(var(--color-primary) / 0.2); }
+  </style>
 </head>
 
 <body class="bg-base-100 text-base-content font-sans theme-gold">
@@ -86,13 +100,16 @@
     function App() {
       return (
         <div className="min-h-screen flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-primary mb-4">🚀 AI Finance Dashboard</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">
+            🚀 AI Finance & Productivity Dashboard
+          </h1>
           <p className="text-muted-content text-center max-w-md">
-            Welcome to your AI-Powered Finance and Productivity Dashboard.  
-            Built with ❤️ React + Gemini AI.
+            Manage your finances smartly and boost your productivity — powered by Google Gemini AI 💡
           </p>
-          <button className="mt-6 bg-primary text-primary-content px-6 py-2 rounded-xl hover:bg-primary-focus transition"
-            onClick={() => alert('✅ React app connected and running!')}>
+          <button
+            className="mt-6 bg-primary text-primary-content px-6 py-2 rounded-xl hover:bg-primary-focus transition"
+            onClick={() => alert('✅ React App Connected Successfully!')}
+          >
             Test App
           </button>
         </div>
@@ -105,7 +122,7 @@
 
   <noscript>
     <div style="text-align:center; padding:40px; color:red;">
-      ⚠️ JavaScript disabled. Please enable it to view the Dashboard.
+      ⚠️ JavaScript disabled. Please enable JS to view the dashboard.
     </div>
   </noscript>
 </body>
