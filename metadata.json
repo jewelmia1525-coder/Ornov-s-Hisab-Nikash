@@ -1,0 +1,8 @@
+{
+  "name": "Copy of React Finance Dashboard",
+  "description": "A comprehensive personal finance dashboard to track income, expenses, receivables, and payables. It features role-based access, data visualization, and various utility widgets.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

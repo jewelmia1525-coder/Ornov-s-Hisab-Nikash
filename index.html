@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Finance Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              bangla: ['Hind Siliguri', 'sans-serif'],
+              cursive: ['Cedarville Cursive', 'cursive'],
+            },
+            colors: {
+              'primary': 'hsl(var(--color-primary))',
+              'primary-focus': 'hsl(var(--color-primary-focus))',
+              'primary-content': 'hsl(var(--color-primary-content))',
+              'base-100': 'hsl(var(--color-base-100))',
+              'base-200': 'hsl(var(--color-base-200))',
+              'base-300': 'hsl(var(--color-base-300))',
+              'base-content': 'hsl(var(--color-base-content))',
+              'muted-content': 'hsl(var(--color-muted-content))',
+              'success': '#4ade80',
+              'danger': '#f87171',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary-content: 220 33% 5%; /* #081226 */
+        --color-base-100: 220 73% 9%; /* #081226 */
+        --color-base-200: 220 53% 13%; /* #0f1a30 */
+        --color-base-300: 220 30% 20%;
+        --color-base-content: 215 30% 90%; /* #e6eef8 */
+        --color-muted-content: 215 14% 65%; /* #9ca3af */
+      }
+      .light-theme {
+        --color-primary-content: 0 0% 100%;
+        --color-base-100: 210 16% 98%; /* #f8f9fa */
+        --color-base-200: 0 0% 100%;
+        --color-base-300: 210 16% 93%; /* #e9ecef */
+        --color-base-content: 210 17% 15%; /* #212529 */
+        --color-muted-content: 210 8% 45%; /* #6c757d */
+      }
+       /* Color Themes */
+      .theme-gold { /* Default */
+        --color-primary: 51 100% 50%;
+        --color-primary-focus: 51 100% 45%;
+      }
+      .light-theme.theme-gold {
+        --color-primary: 43 74% 49%;
+        --color-primary-focus: 43 74% 44%;
+      }
+
+      .theme-blue {
+        --color-primary: 217 91% 60%; /* #3b82f6 */
+        --color-primary-focus: 217 91% 55%;
+      }
+      .light-theme.theme-blue {
+        --color-primary: 211 100% 50%; /* #007bff */
+        --color-primary-focus: 211 100% 45%;
+      }
+
+      .theme-green {
+        --color-primary: 145 63% 49%; /* #22c55e */
+        --color-primary-focus: 145 63% 44%;
+      }
+      .light-theme.theme-green {
+        --color-primary: 134 61% 41%; /* #28a745 */
+        --color-primary-focus: 134 61% 36%;
+      }
+
+      .theme-purple {
+        --color-primary: 262 88% 66%; /* #a855f7 */
+        --color-primary-focus: 262 88% 61%;
+      }
+      .light-theme.theme-purple {
+        --color-primary: 258 52% 51%; /* #6f42c1 */
+        --color-primary-focus: 258 52% 46%;
+      }
+
+      .theme-red {
+        --color-primary: 0 84% 60%; /* #ef4444 */
+        --color-primary-focus: 0 84% 55%;
+      }
+      .light-theme.theme-red {
+        --color-primary: 354 70% 54%; /* #dc3545 */
+        --color-primary-focus: 354 70% 49%;
+      }
+
+      .theme-orange {
+        --color-primary: 26 95% 53%; /* #f97316 */
+        --color-primary-focus: 26 95% 48%;
+      }
+      .light-theme.theme-orange {
+        --color-primary: 33 94% 52%; /* #f59e0b */
+        --color-primary-focus: 33 94% 47%;
+      }
+      .theme-teal {
+        --color-primary: 173 81% 40%; /* #14b8a6 */
+        --color-primary-focus: 173 81% 35%;
+      }
+      .light-theme.theme-teal {
+        --color-primary: 174 72% 45%; /* #20c997 */
+        --color-primary-focus: 174 72% 40%;
+      }
+      .theme-pink {
+        --color-primary: 326 83% 60%; /* #ec4899 */
+        --color-primary-focus: 326 83% 55%;
+      }
+      .light-theme.theme-pink {
+        --color-primary: 332 79% 58%; /* #e83e8c */
+        --color-primary-focus: 332 79% 53%;
+      }
+
+      /* Responsive base font size */
+      html {
+        font-size: 14px;
+        -webkit-tap-highlight-color: transparent; /* Cleaner taps on mobile */
+      }
+      @media (min-width: 640px) {
+        html {
+          font-size: 16px;
+        }
+      }
+
+      /* Custom Cursor */
+      .cursor-dot,
+      .cursor-outline {
+        pointer-events: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+        z-index: 10001;
+      }
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: hsl(var(--color-primary));
+        transition-property: transform;
+        transition-duration: 0.1s;
+      }
+      .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 2px solid hsl(var(--color-primary) / 0.5);
+        transition-duration: 0.2s;
+      }
+      body:hover .cursor-dot, body:hover .cursor-outline {
+        opacity: 1;
+      }
+      .cursor-dot.pointer, .cursor-outline.pointer {
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+      .cursor-outline.pointer {
+        width: 50px;
+        height: 50px;
+        background-color: hsl(var(--color-primary) / 0.2);
+      }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-chartjs-2": "https://aistudiocdn.com/react-chartjs-2@^5.3.1",
+    "chart.js": "https://aistudiocdn.com/chart.js@^4.5.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+<body class="bg-base-100 text-base-content font-sans">
+    <div id="root"></div>
+</body>
+</html>
