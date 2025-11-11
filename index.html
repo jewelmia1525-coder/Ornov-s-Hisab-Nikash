@@ -5,33 +5,54 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Finance & Productivity Dashboard</title>
+
+  <!-- Tailwind CDN (dev/prototype) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ Preload links (kept intact for compatibility) -->
+  <!-- Preconnect / Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
 
-  <!-- ✅ JS Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <!-- Preload resources (kept intact as requested) -->
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/if5nr4n2g94sbx3i.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/k9ddmoad76hsf5ve.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/65rl9iqedda1dqlp.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/2b7syrbllsao6dfw.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/j3kw7nt0btbsdl6i.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/izenq8d29aa0bt7i.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/df9e7fw3sp7epzk8.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/fnyrdbp767erffg9.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/i1o5vq99pz20nedl.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/lyb37q0lzfaz48ls.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/oiycjwsodc60w13x.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/cm24hmxa15vm23us.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/isizi6mfui8ologd.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/lkk0go9ku3rakqed.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/dp1iyniuwkq9vjws.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/bfswtl0pqf7ca4ni.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/oeigp89xlmh3ys13.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/kz98grthj2zdagdq.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/d8q0eewcpk85g2uo.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/osv3cb8kv26g3y1s.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/nb7clfo9v85jx2ur.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/csfofk2p4grn9sa1.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/h6jqi4si2p9ke6xz.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/kgrxz1fdniajx55z.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/nj0a91w6rsoccgxn.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/inchxf7ctre754e0.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/n4t4wto1rov1ag87.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/k6r7uscwdkrkkp7j.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/k792lja2uek2ncjm.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/g1ity34hclp8h2jw.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/nw7xkkvffhmcfde1.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/pcd2pmiusbabga3w.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/l43g26y8ya6dk4ht.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/m58dcy89pdgwf640.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/cv6ig775lfw8bl5x.js" as="script" crossorigin>
+  <link rel="preload" href="https://cdn.oaistatic.com/assets/mbb0gctqlylqqaah.js" as="script" crossorigin>
 
-  <!-- ✅ Fixed React Importmap -->
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://esm.sh/react@18.2.0",
-      "react-dom": "https://esm.sh/react-dom@18.2.0",
-      "react-chartjs-2": "https://esm.sh/react-chartjs-2@5.3.1",
-      "chart.js": "https://esm.sh/chart.js@4.5.1"
-    }
-  }
-  </script>
-
-  <!-- ✅ Full Theme, Color, Cursor CSS -->
+  <!-- CSS Styles (themes, colors, cursor etc.) - kept as original -->
   <style>
     :root {
       --color-primary-content: 220 33% 5%;
@@ -50,18 +71,33 @@
       --color-muted-content: 210 8% 45%;
     }
     .theme-gold { --color-primary: 51 100% 50%; --color-primary-focus: 51 100% 45%; }
+    .light-theme.theme-gold { --color-primary: 43 74% 49%; --color-primary-focus: 43 74% 44%; }
+
     .theme-blue { --color-primary: 217 91% 60%; --color-primary-focus: 217 91% 55%; }
+    .light-theme.theme-blue { --color-primary: 211 100% 50%; --color-primary-focus: 211 100% 45%; }
+
     .theme-green { --color-primary: 145 63% 49%; --color-primary-focus: 145 63% 44%; }
+    .light-theme.theme-green { --color-primary: 134 61% 41%; --color-primary-focus: 134 61% 36%; }
+
     .theme-purple { --color-primary: 262 88% 66%; --color-primary-focus: 262 88% 61%; }
+    .light-theme.theme-purple { --color-primary: 258 52% 51%; --color-primary-focus: 258 52% 46%; }
+
     .theme-red { --color-primary: 0 84% 60%; --color-primary-focus: 0 84% 55%; }
+    .light-theme.theme-red { --color-primary: 354 70% 54%; --color-primary-focus: 354 70% 49%; }
+
     .theme-orange { --color-primary: 26 95% 53%; --color-primary-focus: 26 95% 48%; }
+    .light-theme.theme-orange { --color-primary: 33 94% 52%; --color-primary-focus: 33 94% 47%; }
+
     .theme-teal { --color-primary: 173 81% 40%; --color-primary-focus: 173 81% 35%; }
+    .light-theme.theme-teal { --color-primary: 174 72% 45%; --color-primary-focus: 174 72% 40%; }
+
     .theme-pink { --color-primary: 326 83% 60%; --color-primary-focus: 326 83% 55%; }
+    .light-theme.theme-pink { --color-primary: 332 79% 58%; --color-primary-focus: 332 79% 53%; }
 
     html { font-size: 14px; -webkit-tap-highlight-color: transparent; }
     @media (min-width: 640px) { html { font-size: 16px; } }
 
-    /* ✅ Custom Cursor */
+    /* Custom Cursor */
     .cursor-dot, .cursor-outline {
       pointer-events: none;
       position: fixed;
@@ -70,54 +106,52 @@
       border-radius: 50%;
       opacity: 0;
       transform: translate(-50%, -50%);
-      transition: opacity 0.3s, transform 0.3s, width 0.3s, height 0.3s;
+      transition: opacity .3s, transform .3s, width .3s, height .3s;
       z-index: 10001;
     }
-    .cursor-dot {
-      width: 8px;
-      height: 8px;
-      background-color: hsl(var(--color-primary));
-    }
-    .cursor-outline {
-      width: 40px;
-      height: 40px;
-      border: 2px solid hsl(var(--color-primary) / 0.5);
-    }
+    .cursor-dot { width: 8px; height: 8px; background-color: hsl(var(--color-primary)); }
+    .cursor-outline { width: 40px; height: 40px; border: 2px solid hsl(var(--color-primary)/.5); }
     body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
     .cursor-dot.pointer, .cursor-outline.pointer { transform: translate(-50%, -50%) scale(1.5); }
-    .cursor-outline.pointer { width: 50px; height: 50px; background-color: hsl(var(--color-primary) / 0.2); }
+    .cursor-outline.pointer { width: 50px; height: 50px; background-color: hsl(var(--color-primary)/.2); }
   </style>
 </head>
 
 <body class="bg-base-100 text-base-content font-sans theme-gold">
   <div id="root"></div>
 
-  <!-- ✅ React App Entry Script -->
-  <script type="module">
-    import React from "react";
-    import { createRoot } from "react-dom/client";
+  <!-- JS libraries (kept) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-    function App() {
-      return (
-        <div className="min-h-screen flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            🚀 AI Finance & Productivity Dashboard
-          </h1>
-          <p className="text-muted-content text-center max-w-md">
-            Manage your finances smartly and boost your productivity — powered by Google Gemini AI 💡
-          </p>
-          <button
-            className="mt-6 bg-primary text-primary-content px-6 py-2 rounded-xl hover:bg-primary-focus transition"
-            onClick={() => alert('✅ React App Connected Successfully!')}
-          >
-            Test App
-          </button>
-        </div>
+  <!-- Module script: direct esm.sh imports and browser-safe code (no JSX) -->
+  <script type="module">
+    import React from "https://esm.sh/react@18.2.0";
+    import { createRoot } from "https://esm.sh/react-dom@18.2.0/client";
+
+    // Minimal app using React.createElement (no JSX) so browsers run it directly
+    function AppRoot() {
+      return React.createElement(
+        'div',
+        { className: 'min-h-screen flex flex-col items-center justify-center p-6' },
+        React.createElement('h1', { className: 'text-4xl font-bold text-primary mb-4' }, '🚀 AI Finance & Productivity Dashboard'),
+        React.createElement('p', { className: 'text-muted-content text-center max-w-md' }, 'Manage your finances smartly and boost your productivity — powered by Google Gemini AI.'),
+        React.createElement('button', {
+          className: 'mt-6 bg-primary text-primary-content px-6 py-2 rounded-xl hover:bg-primary-focus transition',
+          onClick: function () { alert('✅ React app connected and running!'); }
+        }, 'Test App')
       );
     }
 
-    const root = document.getElementById("root");
-    createRoot(root).render(<App />);
+    const rootEl = document.getElementById('root');
+    if (rootEl) {
+      createRoot(rootEl).render(React.createElement(AppRoot));
+    } else {
+      console.error('Root element not found');
+    }
   </script>
 
   <noscript>
